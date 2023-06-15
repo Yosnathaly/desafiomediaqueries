@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+.nav{
+    display: flex;
+    grid-area: nav;
+    background-color: rgb(183, 192, 181);
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 55%
+}
+
+.nav img{
+    height: 40px;
+    width: 40px;
+}
+
+.menu__icono{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.main{
+    display: flex;
+    grid-area: main;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    
+}
+
+.main img{
+    outline: 10px solid black;
+    width: 200px;
+    height: 250px;
+}
+
+.main button{
+    background-color: rgb(199, 169, 199);
+    padding: 10px;
+    width: 100px;
+    color: white;
+    margin-block-end: 20px;
+}
+.aside{
+    grid-area: aside;
+    background-color: rgb(228, 191, 222);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.aside div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ .aside select{
+    margin: 20px;
+    font-size: 20px;
+    width: 70%;
+    height: 40px;
+ }
+
+ .footer{
+    text-align: center;
+    max-height: 100vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgb(183, 192, 181);
+    margin: 0;
+}
+.footer__icono{
+    gap: 1rem;
+    font-size: 25px;
+    margin-top: 20px;
+    display: flex;
+}
+
+header{
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        grid-template-columns: 20% 80% ;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas:
+        "header aside"
+        "header main" 
+        "footer main";
+
+    }
+
+    .header{
+        display: flex;
+        grid-area: header;
+        background-color:  rgb(228, 191, 222);
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .header img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .aside{
+        grid-area: aside;
+        background-color: rgb(238, 145, 222);
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .main img{
+        outline: 5px solid white;
+        width: 210px;
+        height: 120px;
+    }
+
+    .main button{
+        background-color: rgb(228, 191, 222);
+        padding: 5px;
+        width: 100px;
+        color: white;
+    }
+    .menu__hamb{
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .footer{
+        text-align: center;
+        max-height: 100vh;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        background-color: rgb(183, 192, 181);
+        margin: 0;
+    }
+
+    
+    
+    
+}
